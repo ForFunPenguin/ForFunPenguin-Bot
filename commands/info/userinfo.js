@@ -11,13 +11,13 @@ module.exports = {
     const member = (() => {
       if (interaction.options.getMember("目標"))
         return interaction.options.getMember("目標")
-       else
+      else
         return interaction.member;
-      })();
-      const joined = Intl.DateTimeFormat('zh-TW').format(member.joinedTimestamp);
-      const roles = member.roles.cache.map(r => r).join(',\n').replace('@everyone', ' ') || 'None'
-      const created = Intl.DateTimeFormat('zh-TW').format(member.user.createdAt);
-      const embed = new EmbedBuilder()
+    })();
+    const joined = Intl.DateTimeFormat('zh-TW').format(member.joinedTimestamp);
+    const roles = member.roles.cache.map(r => r).join(',\n').replace('@everyone', ' ') || 'None'
+    const created = Intl.DateTimeFormat('zh-TW').format(member.user.createdAt);
+    const embed = new EmbedBuilder()
       .setFooter({ text: member.displayName, iconURL: member.user.displayAvatarURL()})
       .setThumbnail(member.user.displayAvatarURL())
       .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
