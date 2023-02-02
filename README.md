@@ -26,6 +26,7 @@
 
 - 變更成員名稱顏色
 - 全面使用斜線指令
+- Hypixel Skyblock 計時器
 
 ## ⚙️ 設定檔
 
@@ -34,6 +35,7 @@
 | `token` | `TOKEN` | Discord 機器人登入 Token | `string` |
 | `guild_id` | `guildId` | 開發伺服器ID | `string` |
 | `client_id` | `clientId` | 你的機器人ID | `string` |
+| `version` | `version` | 機器人目前版本 | `string` |
 
 ## ⚠️ 注意
 - 此機器人的程式碼只針對ForFunPenguin Discord頻道進行編寫, 無法在其他頻道使用.
