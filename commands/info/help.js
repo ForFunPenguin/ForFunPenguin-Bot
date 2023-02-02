@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder } = require('discord.js');
+const { version } = require('../../config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -15,10 +16,11 @@ module.exports = {
         .addFields(
             { name: '身分組 Role', value: '`color` (需達到MVP以上階級才可使用)' + `\n\u200b` },
             { name: '頻道 Channel', value: '`rule`**, **`ping`**, **`uptime`**, **`changelog`**, **`userinfo`' + `\n\u200b`},
-            { name: '模組包 Modpacks', value: '`skyblock`**, **`wynncraft`' + `\n\u200b`},
+            { name: '模組包 Modpacks', value: '`modpacks`' + `\n\u200b`},
+            { name: '空島生存 Skyblock', value: '`rain`' + `\n\u200b`},
         ) //inline: true 同行 ; value: `\n\u200b` or { name: '\u200B', value: '\u200B' } 換行
         .setTimestamp()
-        .setFooter({ text: '目前機器人版本 Ver 3.0.0' });
+        .setFooter({ text: '目前機器人版本 Ver ' + version });
 
         interaction.reply({embeds: [exampleEmbed], ephemeral: true})
     },

@@ -1,11 +1,12 @@
 {
   "name": "ForFunPenguin Bot",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Discord Bot.",
   "author": "ForFunPenguin",
   "main": "node index.js",
   "dependencies": {
     "ascii-table": "^0.0.9",
+    "common-tags": "^1.8.2",
     "discord.js": "^14.6.0"
   }
 }
