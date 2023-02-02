@@ -4,9 +4,6 @@ module.exports = {
 	data: new SlashCommandBuilder()
         .setName('skyblock')
         .setDescription('Hypixel Skyblock指令')
-        //.addStringOption(option =>
-        //  option.setName('清除顏色')
-            //    .setDescription('清除目前名稱所顯示的顏色'))
         .addSubcommand(subcommand =>
 		subcommand
 			.setName('rain')
