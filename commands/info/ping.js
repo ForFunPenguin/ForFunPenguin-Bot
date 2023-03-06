@@ -5,7 +5,7 @@ module.exports = {
 		.setName('ping')
 		.setDescription('查看目前機器人延遲.'),
 	async execute(interaction) {
-		const msg = await interaction.reply({ content: '🏓 Pinging....', fetchReply: true , components: [row] });
+		const msg = await interaction.reply({ content: '🏓 Pinging....', fetchReply: true});
         interaction.editReply(`🏓 Pong!\n延遲為 ${msg.createdTimestamp - interaction.createdTimestamp}毫秒`);
         setTimeout(() => {
             interaction.deleteReply().catch(error => {

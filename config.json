@@ -2,5 +2,8 @@
   "token": "",
   "guild_id": "",
   "client_id": "",
-  "version": "3.0.2"
+  "version": "3.0.3",
+  "link_skyblock": "https://drive.google.com/file/d/1szXO0TveY43rdQJ2sHceBNN2XiaInjI7/view?usp=share_link",
+  "link_wynncraft": "https://drive.google.com/file/d/1QeRCF1MCTIo5UE5-OtZDgBeUuhIPQMGD/view?usp=share_link",
+  "link_changelog": "https://docs.google.com/document/d/139YfJTJQJ_WhwdP2wpOX8lwSPaLchcq0PFjy60UvOD8/edit?usp=sharing"
 }

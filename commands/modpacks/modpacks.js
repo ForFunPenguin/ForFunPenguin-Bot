@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
+const { link_skyblock, link_wynncraft } = require('../../config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -16,9 +17,9 @@ module.exports = {
     async execute(interaction) {
         const packName = interaction.options.getString('模組包名稱')
         if (packName == "Skyblock") {
-            interaction.reply({content: `${interaction.member} \nhttps://drive.google.com/file/d/1szXO0TveY43rdQJ2sHceBNN2XiaInjI7/view?usp=share_link`, ephemeral: true});
+            interaction.reply({content: `${interaction.member} \n${link_skyblock}`, ephemeral: true});
         } else if (packName == "Wynncraft") {
-            interaction.reply({content: `${interaction.member} \nhttps://drive.google.com/file/d/1QeRCF1MCTIo5UE5-OtZDgBeUuhIPQMGD/view?usp=share_link`, ephemeral: true})
+            interaction.reply({content: `${interaction.member} \n${link_wynncraft}`, ephemeral: true})
         } else {
             interaction.reply({content: `無法找到該模組包!`, ephemeral: true});
         }

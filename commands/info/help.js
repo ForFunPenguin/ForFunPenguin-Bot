@@ -18,6 +18,7 @@ module.exports = {
             { name: '頻道 Channel', value: '`rule`**, **`ping`**, **`uptime`**, **`changelog`**, **`userinfo`' + `\n\u200b`},
             { name: '模組包 Modpacks', value: '`modpacks`' + `\n\u200b`},
             { name: '空島生存 Skyblock', value: '`rain`' + `\n\u200b`},
+            { name: '當個創世神 Minecraft', value: '`status`' + `\n\u200b`},
         ) //inline: true 同行 ; value: `\n\u200b` or { name: '\u200B', value: '\u200B' } 換行
         .setTimestamp()
         .setFooter({ text: '目前機器人版本 Ver ' + version });

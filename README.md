@@ -27,6 +27,7 @@
 - 變更成員名稱顏色
 - 全面使用斜線指令
 - Hypixel Skyblock 計時器
+- Minecraft 伺服器狀態查詢
 
 ## ⚙️ 設定檔
 
