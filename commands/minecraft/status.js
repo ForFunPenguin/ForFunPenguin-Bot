@@ -10,20 +10,24 @@ const server_ip_default = "forfunpenguin.ddns.net";
 const server_port = 25565; 
 
 module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('status')
-		.setDescription('查看Minecraft伺服器狀態')
-        .addStringOption(option => option.setName('伺服器ip')
+    data: new SlashCommandBuilder()
+        .setName('status')
+        .setDescription('查看Minecraft伺服器狀態')
+        .addStringOption(option => option.setName('常用伺服器ip')
             .setDescription('想要查看的伺服器IP')
             .addChoices(
             { name: 'forfunpenguin.ddns.net', value: 'forfunpenguin.ddns.net' },
             { name: 'mc.hypixel.net', value: 'mc.hypixel.net' },
             { name: 'play.manacube.com', value: 'play.manacube.com' },
             { name: 'play.wynncraft.com', value: 'play.wynncraft.com' },
-        )),
+        ))
+        .addStringOption(option => option.setName('其他伺服器ip')
+            .setDescription('想要查看的伺服器IP'),
+        ),
     async execute(interaction) {
         const server_ip = (() => {
-            if (interaction.options.getString("伺服器ip")) return interaction.options.getString("伺服器ip")
+            if (interaction.options.getString("常用伺服器ip")) return interaction.options.getString("常用伺服器ip")
+            else if (interaction.options.getString("其他伺服器ip")) return interaction.options.getString("其他伺服器ip")
             else return server_ip_default;
         })();
         let status = "offline";
